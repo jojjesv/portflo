@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="compiled_css/global.css">
+  <link rel="stylesheet" href="compiled_css/global_header.css">
+</head>
+
+<body>
+  <div id="root">
+    <header id="global-header">
+      <div class="content">
+        <h1 id="page-title">
+          Portfolio
+
+          <span class="sub">
+            :Johan
+          </span>
+        </h1>
+      </div>
+    </header>
+    <div id="page-content">
+      <ul v-for="project in projects">
+        <li>
+          <div class="project"></div>{{ project }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
