@@ -6,6 +6,7 @@
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="compiled_css/global.css">
   <link rel="stylesheet" href="compiled_css/global_header.css">
+  <link rel="stylesheet" href="compiled_css/project_carousel.css">
 </head>
 
 <body>
@@ -22,14 +23,29 @@
       </div>
     </header>
     <div id="page-content">
-      <ul v-for="project in projects">
-        <li>
-          <div class="project"></div>{{ project }}
-        </li>
-      </ul>
+      <div id="project-carousel">
+        <div v-for="(project, i) in projects" :class="
+        {
+          project: 1,
+          active: i == activeProjectIndex,
+          left: activeProjectIndex == i - 1,
+          right: activeProjectIndex == i + 1
+        }">
+          <div class="cover" :style='{ "background-image": `url(${project.coverImageSrc})` }'>
+            {{ project }}
+          </div>
+        </div>
+
+        <div class="nav-container">
+          <button :class="{nav: 1, prev: 1 }" v-on:click="prevProject()">
+          </button>
+
+          <button :class="{nav: 1, next: 1 }" v-on:click="nextProject()">
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-  <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

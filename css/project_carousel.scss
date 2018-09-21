@@ -1,0 +1,77 @@
+/* Px from left edge. */
+$active-inset: 80px;
+
+$carousel-width: calc(100% - #{$active-inset});
+
+#project-carousel {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  width: $carousel-width;
+  height: 360px;
+
+  .project,
+  .nav-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project {
+    position: absolute;
+    transition: all 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 0;
+
+    &.left {
+      left: 0;
+      z-index: 1;
+    }
+
+    /* positioned in the middle, active */
+    &.active {
+      left: $active-inset;
+      z-index: 2;
+    }
+
+    /* positioned to the right */
+    &.right {
+      left: 100%;
+      opacity: 0;
+      z-index: 3;
+    }
+  }
+
+  .cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  $nav-btn-size: 80px;
+  .nav-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+
+    .nav {
+      position: relative;
+      top: calc(50% - #{$nav-btn-size / 2});
+      width: $nav-btn-size;
+      height: $nav-btn-size;
+      background: rgba(20, 20, 20, 0.75);
+      border: none;
+      border-radius: 50%;
+
+      /* navigate to next project */
+      &.next {
+        /*left: calc(100% - #{$nav-btn-size * (2 / 3)});*/
+      }
+
+      &.prev {
+        left: -$nav-btn-size / 3;
+      }
+    }
+  }
+}

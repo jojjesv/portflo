@@ -1,0 +1,64 @@
+/* Px from left edge. */
+#project-carousel {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  width: calc(100% - 80px);
+  height: 360px;
+}
+#project-carousel .project,
+#project-carousel .nav-container {
+  width: 100%;
+  height: 100%;
+}
+#project-carousel .project {
+  position: absolute;
+  transition: all 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 0;
+  /* positioned in the middle, active */
+  /* positioned to the right */
+}
+#project-carousel .project.left {
+  left: 0;
+  z-index: 1;
+}
+#project-carousel .project.active {
+  left: 80px;
+  z-index: 2;
+}
+#project-carousel .project.right {
+  left: 100%;
+  opacity: 0;
+  z-index: 3;
+}
+#project-carousel .cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#project-carousel .nav-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+}
+#project-carousel .nav-container .nav {
+  position: relative;
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background: rgba(20, 20, 20, 0.75);
+  border: none;
+  border-radius: 50%;
+  /* navigate to next project */
+}
+#project-carousel .nav-container .nav.next {
+  /*left: calc(100% - 53.3333333333px);*/
+}
+#project-carousel .nav-container .nav.prev {
+  left: -26.6666666667px;
+}
+
+/*# sourceMappingURL=project_carousel.css.map */

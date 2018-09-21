@@ -7,4 +7,6 @@ body {
 #page-content {
   max-width: $content-max-width;
   margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
 }
