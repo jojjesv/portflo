@@ -1,0 +1,16 @@
+@import "_def";
+
+#project-info {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  width: 100%;
+
+  /* Align with carousel project title. */
+  padding-left: $carousel-active-inset + 36px;
+  padding-right: 56px;
+}
+
+.external-link {
+  color: #0D47A1;
+}

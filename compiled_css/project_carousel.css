@@ -1,10 +1,13 @@
 /* Px from left edge. */
+/* Max content width. */
+/* Inset of the active project in the project carousel. */
 #project-carousel {
   list-style: none;
   overflow: hidden;
   padding: 0;
-  width: calc(100% - 80px);
+  width: 100%;
   height: 360px;
+  position: relative;
 }
 #project-carousel .project,
 #project-carousel .nav-container {
@@ -15,11 +18,13 @@
   position: absolute;
   transition: all 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 0;
+  opacity: 1;
+  left: 0;
+  box-shadow: 0 0 120px rgba(0, 0, 0, 0.75);
   /* positioned in the middle, active */
   /* positioned to the right */
 }
 #project-carousel .project.left {
-  left: 0;
   z-index: 1;
 }
 #project-carousel .project.active {
@@ -30,6 +35,16 @@
   left: 100%;
   opacity: 0;
   z-index: 3;
+}
+#project-carousel .project .title {
+  position: absolute;
+  bottom: 48px;
+  left: 36px;
+  margin: 0;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #project-carousel .cover {
   width: 100%;
@@ -52,13 +67,20 @@
   background: rgba(20, 20, 20, 0.75);
   border: none;
   border-radius: 50%;
+  transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  left: 0;
   /* navigate to next project */
 }
-#project-carousel .nav-container .nav.next {
-  /*left: calc(100% - 53.3333333333px);*/
-}
 #project-carousel .nav-container .nav.prev {
+  left: calc(100% - 133.3333333333px);
+}
+#project-carousel .nav-container .nav.next {
   left: -26.6666666667px;
+}
+#project-carousel .nav-container .nav:not(.visible) {
+  pointer-events: none;
+  transform: scale(0.75);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=project_carousel.css.map */
