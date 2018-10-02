@@ -1,17 +1,21 @@
+const baseUrl = 'http://its.teknikum.it/johan';
+
 export default [{
-  title: 'Elevkårsapp',
-  subtitle: 'A step for student communication',
-  description: 'Lorem ipsum',
-  coverImageSrc: 'assets/cover/studentapp.jpg'
+  title: 'jMenu',
+  subtitle: "Easily obtain the current week's lunch menu",
+  description: 'This tool lists the school lunch menu for the current week. Designed for simplicity.',
+  coverImageSrc: 'assets/cover/studentapp.jpg',
+  href: `${baseUrl}/lunch/`
 }, {
-  title: 'Project 2',
-  subtitle: 'Writing Technical Articles',
-  description: `The notes below apply to technical papers in computer science and electrical engineering, with emphasis on papers in systems and networks.
-  Read Strunk and White, Elements of Style. Again.<br />
-  Give the paper to somebody else to read. If you can, find two people: one person familiar with the technical matter, another only generally familiar with the area.`,
-  coverImageSrc: 'assets/cover/studentapp.jpg'
+  title: 'Emoji Popper',
+  subtitle: 'A game of swiftness',
+  description: `A native JavaScript game where the objective is to inflate balloons until they pop.`,
+  coverImageSrc: 'assets/cover/studentapp.jpg',
+  href: `${baseUrl}/popper/`
 }, {
-  title: 'Project 3',
-  description: 'Lorem ipsum',
-  coverImageSrc: 'assets/cover/studentapp.jpg'
+  title: 'Viking Robotics',
+  subtitle: 'The first FRC team from Sweden',
+  description: "The team's website shows the lastest posts from their Facebook page, the team in its entirety as well as the team's sponsors.",
+  coverImageSrc: 'assets/cover/studentapp.jpg',
+  href: `${baseUrl}/popper/`
 }]

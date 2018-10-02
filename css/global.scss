@@ -3,10 +3,12 @@
 body {
   margin: 0;
   text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #page-content {
   max-width: $content-max-width;
+  min-width: $content-min-width;
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;

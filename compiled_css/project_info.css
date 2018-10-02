@@ -1,12 +1,12 @@
 /* Max content width. */
+/* Min content width. */
 /* Inset of the active project in the project carousel. */
 #project-info {
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   width: 100%;
   /* Align with carousel project title. */
-  padding-left: 116px;
+  padding-left: calc(18.5% + 36px);
   padding-right: 56px;
 }
 

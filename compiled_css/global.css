@@ -1,12 +1,15 @@
 /* Max content width. */
+/* Min content width. */
 /* Inset of the active project in the project carousel. */
 body {
   margin: 0;
   text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #page-content {
   max-width: 960px;
+  min-width: 320px;
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;

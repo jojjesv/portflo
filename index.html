@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="compiled_css/global_header.css">
   <link rel="stylesheet" href="compiled_css/project_carousel.css">
   <link rel="stylesheet" href="compiled_css/project_info.css">
+  <link rel="stylesheet" href="compiled_css/footer.css">
+  <meta name="viewport" content="width=device-width" />
 </head>
 
 <body>
@@ -29,8 +31,8 @@
         {
           project: 1,
           active: i == activeProjectIndex,
-          left: activeProjectIndex == i - 1,
-          right: activeProjectIndex == i + 1
+          left: activeProjectIndex < i,
+          right: activeProjectIndex > i
         }">
           <div class="cover" :style='{ "background-image": `url(${project.coverImageSrc})` }'>
             <h2 class="title">{{ project.title }}</h2>
@@ -50,11 +52,15 @@
         <p class="description">{{ projects[activeProjectIndex].description }}</p>
 
         <div style="text-align: right">
-          <a class="external-link" target="_blank">Visit the site</a>
+          <a class="external-link" target="_blank" :href="projects[activeProjectIndex].href">Visit the site</a>
         </div>
       </div>
     </div>
     <script type="module" src="./js/main.js"></script>
+
+    <footer>
+      <p id="copyright-notice">© 2018 Johan S</p>
+    </footer>
 </body>
 
 </html>

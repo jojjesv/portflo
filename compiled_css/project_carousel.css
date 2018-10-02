@@ -1,5 +1,6 @@
 /* Px from left edge. */
 /* Max content width. */
+/* Min content width. */
 /* Inset of the active project in the project carousel. */
 #project-carousel {
   list-style: none;
@@ -24,17 +25,24 @@
   /* positioned in the middle, active */
   /* positioned to the right */
 }
-#project-carousel .project.left {
+#project-carousel .project.active {
+  left: 18.5%;
+}
+#project-carousel .project:nth-child(1) {
+  z-index: 3;
+}
+#project-carousel .project:nth-child(2) {
+  z-index: 2;
+}
+#project-carousel .project:nth-child(3) {
   z-index: 1;
 }
-#project-carousel .project.active {
-  left: 80px;
-  z-index: 2;
+#project-carousel .project:nth-child(4) {
+  z-index: 0;
 }
 #project-carousel .project.right {
   left: 100%;
   opacity: 0;
-  z-index: 3;
 }
 #project-carousel .project .title {
   position: absolute;
