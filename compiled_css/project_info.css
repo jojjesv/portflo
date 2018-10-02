@@ -6,11 +6,11 @@
   font-weight: 400;
   width: 100%;
   /* Align with carousel project title. */
-  padding-left: calc(18.5% + 36px);
-  padding-right: 56px;
+  padding: 0 calc(18.5% + 36px);
 }
 
 .external-link {
+  text-decoration: none;
   color: #0D47A1;
 }
 

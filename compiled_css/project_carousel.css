@@ -9,6 +9,9 @@
   width: 100%;
   height: 360px;
   position: relative;
+  background: url(../assets/cover/placeholder.jpg);
+  background-size: cover;
+  background-position: center;
 }
 #project-carousel .project,
 #project-carousel .nav-container {
@@ -54,10 +57,16 @@
   font-weight: 300;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+#project-carousel .project .title.dark {
+  color: #424242;
+}
 #project-carousel .cover {
   width: 100%;
   height: 100%;
   position: absolute;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
 }
 #project-carousel .nav-container {
   position: absolute;

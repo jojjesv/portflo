@@ -35,7 +35,10 @@
           right: activeProjectIndex > i
         }">
           <div class="cover" :style='{ "background-image": `url(${project.coverImageSrc})` }'>
-            <h2 class="title">{{ project.title }}</h2>
+            <h2 :class="{
+              title: 1,
+              dark: !!project.light
+            }">{{ project.title }}</h2>
           </div>
         </div>
 

@@ -6,10 +6,10 @@
   width: 100%;
 
   /* Align with carousel project title. */
-  padding-left: calc(#{$carousel-active-inset} + 36px);
-  padding-right: 56px;
+  padding: 0 calc(#{$carousel-active-inset} + 36px);
 }
 
 .external-link {
+  text-decoration: none;
   color: #0D47A1;
 }
