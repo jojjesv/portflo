@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Portfolio</title>
+  <title>Portfolio - Johan</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="compiled_css/global.css">
   <link rel="stylesheet" href="compiled_css/global_header.css">
@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="compiled_css/project_info.css">
   <link rel="stylesheet" href="compiled_css/footer.css">
   <meta name="viewport" content="width=device-width" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
@@ -43,9 +44,9 @@
         </div>
 
         <div class="nav-container">
-          <button :class="{nav: 1, next: 1, visible: activeProjectIndex < projects.length - 1}" v-on:click="nextProject()">
+          <button :class="{nav: 1, prev: 1, visible: activeProjectIndex < projects.length - 1}" v-on:click="nextProject()">
           </button>
-          <button :class="{nav: 1, prev: 1, visible: activeProjectIndex > 0}" v-on:click="prevProject()">
+          <button :class="{nav: 1, next: 1, visible: activeProjectIndex > 0}" v-on:click="prevProject()">
           </button>
         </div>
       </div>
